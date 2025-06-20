@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    overflow: hidden; /* Hide scrollbars until doors open */
+}
+
+.content {
+    /* Style your main content here */
+    text-align: center;
+    padding: 50px;
+}
+
+.door-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+.door {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: #a08a7d; /* A notebook-y color */
+    /* You can add a background image to make it look more like a notebook */
+    transition: transform 1.5s ease-in-out;
+}
+
+.door.left {
+    left: 0;
+    transform-origin: left;
+}
+
+.door.right {
+    right: 0;
+    transform-origin: right;
+}
+
+/* This class will be added by JavaScript to open the doors */
+.door.open {
+    transform: scaleX(0);
+}
